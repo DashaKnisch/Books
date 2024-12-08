@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Помощь</title>
+    <link rel="stylesheet" href="help.css">
+    <script src="javahelp.js" defer></script> 
+</head>
+<body>
+    <!--Навигация-->
+    <nav>
+        <ul class="nav-links">
+            <li class="register-item"><a href="#" id="register-btn">Регистрация</a></li>
+            <li><a href="index.html">Назад</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <span class="burger-menu" id="burger-menu">&#9776;</span>
+    </nav>
+
+    <!--Регистрация-->
+    <div id="register-form" class="register-form">
+        <div class="form-content">
+            <span class="close-btn">&times;</span>
+            <h1 class="form-title">Регистрация</h1>
+            <form>
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+    <main>
+        <section class="faq">
+            <h2>Часто задаваемые вопросы</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Какие книги вы продаёте?</span>
+                    <div class="arrow"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>Мы продаём книги всех жанров: от художественной литературы до научных изданий.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Как заказать книгу?</span>
+                    <div class="arrow"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>Вы можете заказать книгу через наш сайт или посетить магазин лично.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Как получить скидку?</span>
+                    <div class="arrow"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>Скидки доступны для постоянных клиентов и при оформлении подписки на рассылку.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Предоставляете ли вы книги в аренду?</span>
+                    <div class="arrow"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>На данный момент аренда книг не предоставляется, но мы предлагаем привлекательные цены на покупку.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Есть ли доставка?</span>
+                    <div class="arrow"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>Да, мы предлагаем доставку по всей стране. Бесплатная доставка для заказов свыше 2000 рублей.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Как верно выбрать книгу?</span>
+                    <div class="arrow"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>Мы поможем вам с выбором, предоставив отзывы читателей, а также рекомендации наших экспертов.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="ask-question">
+            <h2>Задать вопрос</h2>
+            <form id="askQuestionForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя">
+                    <div id="nameError" class="error-message">Это поле обязательно для заполнения.</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Ваш email</label>
+                    <input type="email" id="email" name="email" placeholder="Введите ваш email">
+                    <div id="emailError" class="error-message">Это поле обязательно для заполнения.</div>
+                </div>
+                <div class="form-group">
+                    <label for="question">Ваш вопрос</label>
+                    <textarea id="question" name="question" placeholder="Введите ваш вопрос"></textarea>
+                    <div id="questionError" class="error-message">Это поле обязательно для заполнения.</div>
+                </div>
+                <button type="submit">Отправить вопрос</button>
+            </form>
+        </section>
+        
+        
+    </main>
+    <!-- Футер -->
+    <footer id="contact">
+        <p>&copy; г. Москва, 2024, Дарья Книшенко</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook-f"></a>
+            <a href="https://www.twitter.com" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin-in"></a>
+        </div>
+    </footer>
+</body>
+</html>

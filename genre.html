@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Жанры литературы</title>
+    <link rel="stylesheet" href="stylesgenre.css">
+    <script src="javagenre.js" defer></script>
+</head>
+<body>
+    <!--Навигация-->
+    <nav>
+        <ul class="nav-links">
+            <li class="register-item"><a href="#" id="register-btn">Регистрация</a></li>
+            <li><a href="index.html">Назад</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <span class="burger-menu" id="burger-menu">&#9776;</span>
+    </nav>
+
+    <!--Регистрация-->
+    <div id="register-form" class="register-form">
+        <div class="form-content">
+            <span class="close-btn">&times;</span>
+            <h1 class="form-title">Регистрация</h1>
+            <form>
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="genre-page">
+        <div class="genre-description-block">
+            <h2>Жанры литературы — это...</h2>
+            <p>Литературные жанры — это категория произведений, объединенных общими особенностями стиля, формы и содержания. Они могут включать в себя классику, детективы, фэнтези, исторические романы и многие другие направления, которые могут варьироваться в зависимости от времени, культуры и авторского подхода.</p>
+        </div>
+    
+        <!-- Жанр: Классика -->
+        <section class="genre-section">
+            <h3>Классика</h3>
+            <div class="circle circle-1" style="top: 10%; left: 5%;"></div>
+            <div class="circle circle-2" style="top: 30%; left: 60%;"></div>
+            <div class="circle circle-3" style="top: 50%; left: 80%;"></div>
+            <div class="circle circle-4" style="top: 20%; left: 80%;"></div>
+            <div class="circle circle-5" style="top: 70%; left: 20%;"></div>
+            <p>Лучшие произведения мировой литературы: Достоевский, Толстой и другие.</p>
+            <div class="genre-content">
+                <img src="classics.png" alt="Классика" class="genre-image">
+                <div class="genre-description">
+                    <p>
+                        Классическая литература — это произведения, которые не теряют своей актуальности на протяжении веков.
+                        Эти книги считаются эталонами художественного слова и продолжают вдохновлять новые поколения.
+                        Лев Толстой, Фёдор Достоевский и другие выдающиеся авторы оставили нам великолепные произведения.
+                    </p>
+                </div>
+            </div>
+    
+            <h4>Популярные книги в жанре</h4>
+            <div class="books-gallery">
+                <div class="book-item">
+                    <img src="the-master-and-margarita (1).png" alt="Мастер и Маргарита">
+                    <p>Мастер и Маргарита</p>
+                </div>
+                <div class="book-item">
+                    <img src="crime-and-punishment (1).png" alt="Преступление и наказание">
+                    <p>Преступление и наказание</p>
+                </div>
+                <div class="book-item">
+                    <img src="anna-karenina (1).png" alt="Анна Каренина">
+                    <p>Анна Каренина</p>
+                </div>
+            </div>
+    
+            <h4>Отзывы</h4>
+            <div class="reviews">
+                <div class="review-item">
+                    <span class="stars">★★★★☆</span><span class="rating">9/10</span>
+                    <p>"Безусловно, классика — это то, что стоит прочитать каждому. Вдохновляет и оставляет след в душе."</p>
+                </div>
+                <div class="review-item">
+                    <span class="stars">★★★☆☆</span><span class="rating">6/10</span>
+                    <p>"Иногда слишком трудно читать, но это важно для понимания истории литературы."</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Жанр: Детективы -->
+        <section class="genre-section">
+            <h3>Детективы</h3>
+            <div class="circle circle-1" style="top: 10%; left: 5%;"></div>
+            <div class="circle circle-2" style="top: 30%; left: 60%;"></div>
+            <div class="circle circle-3" style="top: 50%; left: 80%;"></div>
+            <div class="circle circle-4" style="top: 20%; left: 80%;"></div>
+            <div class="circle circle-5" style="top: 70%; left: 20%;"></div>
+            <p>Захватывающие расследования и острые сюжеты.</p>
+            <div class="genre-content">
+                <img src="detective1.png" alt="Детективы" class="genre-image">
+                <div class="genre-description">
+                    <p>
+                        Детективы — это жанр, который погружает читателя в мир загадочных преступлений и расследований. 
+                        Это мир, где умственные способности героя определяют исход событий. Авторитетные писатели в жанре детектива — Агата Кристи, Артур Конан Дойл и другие.
+                    </p>
+                </div>
+            </div>
+    
+            <h4>Популярные книги в жанре</h4>
+            <div class="books-gallery">
+                <div class="book-item">
+                    <img src="murder-on-the-orient-express (1).png" alt="Убийство в Восточном экспрессе">
+                    <p>Убийство в Восточном экспрессе</p>
+                </div>
+                <div class="book-item">
+                    <img src="sherlock-holmes (1).png" alt="Шерлок Холмс">
+                    <p>Шерлок Холмс</p>
+                </div>
+                <div class="book-item">
+                    <img src="the-girl-with-the-dragon-tattoo (1).png" alt="Девушка с татуировкой дракона">
+                    <p>Девушка с татуировкой дракона</p>
+                </div>
+            </div>
+    
+            <h4>Отзывы</h4>
+            <div class="reviews">
+                <div class="review-item">
+                    <span class="stars">★★★★★</span><span class="rating">10/10</span>
+                    <p>"Просто потрясающий жанр! Захватывает с первых страниц."</p>
+                </div>
+                <div class="review-item">
+                    <span class="stars">★★☆☆☆</span><span class="rating">4/10</span>
+                    <p>"Некоторые книги кажутся слишком предсказуемыми."</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Жанр: Фэнтези -->
+        <section class="genre-section">
+            <h3>Фэнтези</h3>
+            <div class="circle circle-1" style="top: 10%; left: 5%;"></div>
+            <div class="circle circle-2" style="top: 30%; left: 60%;"></div>
+            <div class="circle circle-3" style="top: 50%; left: 80%;"></div>
+            <div class="circle circle-4" style="top: 20%; left: 80%;"></div>
+            <div class="circle circle-5" style="top: 70%; left: 20%;"></div>
+            <p>Магия, приключения и фантастические миры.</p>
+            <div class="genre-content">
+                <img src="fantasy1.png" alt="Фэнтези" class="genre-image">
+                <div class="genre-description">
+                    <p>
+                        Фэнтези — это жанр, в котором встречаются элементы магии, мифических существ и вымышленных миров. 
+                        Он переносит читателя в миры, где возможны любые чудеса. Жанр фэнтези популярен благодаря таким авторам, как Дж. Р. Р. Толкин и Дж. К. Роулинг.
+                    </p>
+                </div>
+            </div>
+    
+            <h4>Популярные книги в жанре</h4>
+            <div class="books-gallery">
+                <div class="book-item">
+                    <img src="lord-of-the-rings (1).png" alt="Властелин колец">
+                    <p>Властелин колец</p>
+                </div>
+                <div class="book-item">
+                    <img src="harry-potter (1).png" alt="Гарри Поттер">
+                    <p>Гарри Поттер</p>
+                </div>
+                <div class="book-item">
+                    <img src="the-chronicles-of-narnia (1).png" alt="Хроники Нарнии">
+                    <p>Хроники Нарнии</p>
+                </div>
+            </div>
+    
+            <h4>Отзывы</h4>
+            <div class="reviews">
+                <div class="review-item">
+                    <span class="stars">★★★★★</span><span class="rating">10/10</span>
+                    <p>"Фэнтези — это захватывающие миры и приключения! Отличный способ убежать от реальности."</p>
+                </div>
+                <div class="review-item">
+                    <span class="stars">★★★★☆</span><span class="rating">8/10</span>
+                    <p>"Магия, чудеса и невероятные существа — что может быть лучше?"</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Жанр: Исторические -->
+        <section class="genre-section">
+            <h3>Исторические</h3>
+            <div class="circle circle-1" style="top: 10%; left: 5%;"></div>
+            <div class="circle circle-2" style="top: 30%; left: 60%;"></div>
+            <div class="circle circle-3" style="top: 50%; left: 80%;"></div>
+            <div class="circle circle-4" style="top: 20%; left: 80%;"></div>
+            <div class="circle circle-5" style="top: 70%; left: 20%;"></div>
+            <p>Погрузитесь в величественные события прошлого.</p>
+            <div class="genre-content">
+                <img src="history1.png" alt="Исторические" class="genre-image">
+                <div class="genre-description">
+                    <p>
+                        Исторические романы помогают нам пережить важные моменты истории. Эти произведения олицетворяют эпохи и события, важные для развития общества.
+                        Например, "Война и мир" Льва Толстого — это не только произведение, но и историческое пособие.
+                    </p>
+                </div>
+            </div>
+    
+            <h4>Популярные книги в жанре</h4>
+            <div class="books-gallery">
+                <div class="book-item">
+                    <img src="war-and-peace (1).png" alt="Война и мир">
+                    <p>Война и мир</p>
+                </div>
+                <div class="book-item">
+                    <img src="three-comrades (1).png" alt="Три товарища">
+                    <p>Три товарища</p>
+                </div>
+                <div class="book-item">
+                    <img src="the-history-of-the-russian-state (1).png" alt="История государства Российского">
+                    <p>История государства Российского</p>
+                </div>
+            </div>
+    
+            <h4>Отзывы</h4>
+            <div class="reviews">
+                <div class="review-item">
+                    <span class="stars">★★★★☆</span><span class="rating">9/10</span>
+                    <p>"История, как искусство. Глубокие произведения о событиях, которые изменили мир."</p>
+                </div>
+                <div class="review-item">
+                    <span class="stars">★★★☆☆</span><span class="rating">6/10</span>
+                    <p>"Иногда исторические романы слишком сложные, но они несомненно важны."</p>
+                </div>
+            </div>
+        </section>
+            <!-- Жанр: Нон-фикшен -->
+        <section class="genre-section">
+            <h3>Нон-фикшен</h3>
+            <div class="circle circle-1" style="top: 10%; left: 5%;"></div>
+            <div class="circle circle-2" style="top: 30%; left: 60%;"></div>
+            <div class="circle circle-3" style="top: 50%; left: 80%;"></div>
+            <div class="circle circle-4" style="top: 20%; left: 80%;"></div>
+            <div class="circle circle-5" style="top: 70%; left: 20%;"></div>
+            <p>Правдивые истории и актуальные знания.</p>
+            <div class="genre-content">
+                <img src="non-fiction.png" alt="Нон-фикшен" class="genre-image">
+                <div class="genre-description">
+                    <p>
+                        Нон-фикшен — это жанр, который предлагает читателю реальную информацию о мире.
+                        Это могут быть биографии, мемуары, научные работы, рассказы о великих событиях и открытиях.
+                        Книги в этом жанре помогают расширить кругозор, научиться чему-то новому и глубже понять окружающий мир.
+                        Вы можете познакомиться с мыслями великих ученых, исследовать важнейшие исторические моменты и получить новые знания.
+                    </p>
+                </div>
+            </div>
+
+            <h4>Популярные книги в жанре</h4>
+            <div class="books-gallery">
+                <div class="book-item">
+                    <img src="a-man-in-search-of-meaning (1).png" alt="Человек в поисках смысла">
+                    <p>Человек в поисках смысла</p>
+                </div>
+                <div class="book-item">
+                    <img src="willpower (1).png" alt="Сила воли">
+                    <p>Сила воли</p>
+                </div>
+                <div class="book-item">
+                    <img src="think-and-get-rich (1).png" alt="Думай и богатей">
+                    <p>Думай и богатей</p>
+                </div>
+            </div>
+
+            <h4>Отзывы</h4>
+            <div class="reviews">
+                <div class="review-item">
+                    <span class="stars">★★★★★</span><span class="rating">10/10</span>
+                    <p>"Очень вдохновляющие и полезные книги! Множество практических советов и мотивации."</p>
+                </div>
+                <div class="review-item">
+                    <span class="stars">★★★★☆</span><span class="rating">9/10</span>
+                    <p>"Отличные произведения, которые помогают взглянуть на жизнь с новой перспективы."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Жанр: Романтика -->
+        <section class="genre-section">
+            <h3>Романтика</h3>
+            <div class="circle circle-1" style="top: 10%; left: 5%;"></div>
+            <div class="circle circle-2" style="top: 30%; left: 60%;"></div>
+            <div class="circle circle-3" style="top: 50%; left: 80%;"></div>
+            <div class="circle circle-4" style="top: 20%; left: 80%;"></div>
+            <div class="circle circle-5" style="top: 70%; left: 20%;"></div>
+            <p>Истории о любви, страсти и отношениях.</p>
+            <div class="genre-content">
+                <img src="romance1.png" alt="Романтика" class="genre-image">
+                <div class="genre-description">
+                    <p>
+                        Романтика — это жанр, который всегда актуален, потому что любовь и страсть — вечные темы.
+                        Здесь читатель встречает захватывающие истории о влюбленных, преодолении трудностей на пути к счастью,
+                        а также все сложности человеческих отношений. Этот жанр позволяет уйти в мир эмоций и переживаний.
+                    </p>
+                </div>
+            </div>
+
+            <h4>Популярные книги в жанре</h4>
+            <div class="books-gallery">
+                <div class="book-item">
+                    <img src="pride-and-prejudice (1).png" alt="Гордость и предубеждение">
+                    <p>Гордость и предубеждение</p>
+                </div>
+                <div class="book-item">
+                    <img src="the-tablets-of-fate (1).png" alt="Скрижали Судьбы">
+                    <p>Скрижали Судьбы</p>
+                </div>
+                <div class="book-item">
+                    <img src="memory-notebook (1).png" alt="Тетрадь памяти">
+                    <p>Тетрадь памяти</p>
+                </div>
+            </div>
+
+            <h4>Отзывы</h4>
+            <div class="reviews">
+                <div class="review-item">
+                    <span class="stars">★★★★★</span><span class="rating">10/10</span>
+                    <p>"Невероятно трогательные истории, которые заставляют верить в любовь и чудеса!"</p>
+                </div>
+                <div class="review-item">
+                    <span class="stars">★★★★☆</span><span class="rating">9/10</span>
+                    <p>"Очень романтичные книги, которые приятно читать в выходные вечера."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Жанр: Научная фантастика -->
+        <section class="genre-section">
+            <h3>Научная фантастика</h3>
+            <div class="circle circle-1" style="top: 10%; left: 5%;"></div>
+            <div class="circle circle-2" style="top: 30%; left: 60%;"></div>
+            <div class="circle circle-3" style="top: 50%; left: 80%;"></div>
+            <div class="circle circle-4" style="top: 20%; left: 80%;"></div>
+            <div class="circle circle-5" style="top: 70%; left: 20%;"></div>
+            <p>Мир будущего, технологии и неизвестные вселенные.</p>
+            <div class="genre-content">
+                <img src="science1.png" alt="Научная фантастика" class="genre-image">
+                <div class="genre-description">
+                    <p>
+                        Научная фантастика переносит нас в миры, где технологии и научные открытия изменяют жизнь человечества.
+                        Это жанр, который не только вдохновляет на новые открытия, но и поднимает важные вопросы о будущем.
+                        Писатели-фантасты, такие как Айзек Азимов, Филип К. Дик и другие, создают невероятные истории о технологиях, космосе и искусственном интеллекте.
+                    </p>
+                </div>
+            </div>
+
+            <h4>Популярные книги в жанре</h4>
+            <div class="books-gallery">
+                <div class="book-item">
+                    <img src="451-degrees-fahrenheit (1).png" alt="451 градус по Фаренгейту">
+                    <p>451 градус по Фаренгейту</p>
+                </div>
+                <div class="book-item">
+                    <img src="1984 (1).png" alt="1984">
+                    <p>1984</p>
+                </div>
+                <div class="book-item">
+                    <img src="dune (1).png" alt="Дюна">
+                    <p>Дюна</p>
+                </div>
+            </div>
+
+            <h4>Отзывы</h4>
+            <div class="reviews">
+                <div class="review-item">
+                    <span class="stars">★★★★★</span><span class="rating">10/10</span>
+                    <p>"Потрясающие произведения, которые заставляют задуматься о будущем человечества и технологий."</p>
+                </div>
+                <div class="review-item">
+                    <span class="stars">★★★★☆</span><span class="rating">8/10</span>
+                    <p>"Фантастика, которая может предсказать будущее и поставить важные вопросы."</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Футер -->
+    <footer id="contact">
+        <p>&copy; г. Москва, 2024, Дарья Книшенко</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook-f"></a>
+            <a href="https://www.twitter.com" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin-in"></a>
+        </div>
+    </footer>
+</body>
+</html>

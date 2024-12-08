@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Жанры литературы</title>
+    <link rel="stylesheet" href="shop.css">
+    <script src="javashop.js" defer></script>
+</head>
+<body>
+    <!--Навигация-->
+    <nav>
+        <ul class="nav-links">
+            <li class="register-item"><a href="#" id="register-btn">Регистрация</a></li>
+            <li><a href="index.html">Назад</a></li>
+            <li><button id="cart-btn" class="cart-button"><i class="fas fa-shopping-cart"></i> Корзина (<span id="cart-count">0</span>)</button></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <span class="burger-menu" id="burger-menu">&#9776;</span>
+    </nav>
+
+    <!--Регистрация-->
+    <div id="register-form" class="register-form">
+        <div class="form-content">
+            <span class="close-btn">&times;</span>
+            <h1 class="form-title">Регистрация</h1>
+            <form>
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Корзина -->
+    <div id="cart-popup" class="cart-popup">
+    <span id="close-cart-btn" class="cart-close-btn">&times;</span>
+    <h2>Ваша корзина:</h2>
+
+    <!-- Фильтрация по цене в корзине -->
+    <div class="cart-filters">
+        <input type="number" id="cart-min-price" placeholder="Мин. цена" />
+        <input type="number" id="cart-max-price" placeholder="Макс. цена" />
+        <button id="apply-cart-filters-btn">Применить фильтры</button>
+    </div>
+
+    <button id="sort-price-btn">↑↓ Сортировка по цене</button>
+    
+    <div id="cart-items"></div>
+    <div id="empty-cart-message" style="display: none;">Ваша корзина пуста...</div>
+    <div class="cart-total-clear">
+        <p id="total-price">Итого: 0 рублей</p>
+        <button id="clear-cart-btn">Очистить корзину</button>
+    </div>
+    </div>
+
+
+    <main>
+        <h2 class="gallery-title">Каталог товаров:</h2>
+        <div class="catalog">
+    <!-- Мастер и Маргарита -->
+    <div class="book-card">
+        <img src="the-master-and-margarita (1).png" alt="Мастер и Маргарита">
+        <h2>Мастер и Маргарита</h2>
+        <p class="price">500 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Роман Михаила Булгакова, в котором реальность переплетается с фантастикой и мистикой. История о любви и борьбе между силами добра и зла.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Преступление и Наказание -->
+    <div class="book-card">
+        <img src="crime-and-punishment (1).png" alt="Преступление и Наказание">
+        <h2>Преступление и Наказание</h2>
+        <p class="price">450 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Роман Федора Достоевского о студенте, который решается на убийство и испытывает моральные муки. Одно из важнейших произведений русской литературы.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Анна Каренина -->
+    <div class="book-card">
+        <img src="anna-karenina (1).png" alt="Анна Каренина">
+        <h2>Анна Каренина</h2>
+        <p class="price">470 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Роман Льва Толстого, в котором повествуется о трагической судьбе женщины, оказавшейся между семьей и страстью. Классика мировой литературы.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Убийство в восточном экспрессе -->
+    <div class="book-card">
+        <img src="murder-on-the-orient-express (1).png" alt="Убийство в восточном экспрессе">
+        <h2>Убийство в восточном экспрессе</h2>
+        <p class="price">480 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Детективный роман Агаты Кристи, в котором Эркюль Пуаро расследует убийство, произошедшее в поезде. Логика и психологические загадки.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Шерлок Холмс -->
+    <div class="book-card">
+        <img src="sherlock-holmes (1).png" alt="Шерлок Холмс">
+        <h2>Шерлок Холмс</h2>
+        <p class="price">510 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Шерлок Холмс — знаменитый детектив, созданный Артуром Конан Дойлом, который решает самые запутанные преступления, используя свою логику и внимание к деталям.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Девушка с татуировкой дракона -->
+    <div class="book-card">
+        <img src="the-girl-with-the-dragon-tattoo (1).png" alt="Девушка с татуировкой дракона">
+        <h2>Девушка с татуировкой дракона</h2>
+        <p class="price">490 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Триллер Стига Ларссона, где журналист и хакер расследуют исчезновение девушки. Напряженный сюжет и захватывающие повороты.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Властелин Колец -->
+    <div class="book-card">
+        <img src="lord-of-the-rings (1).png" alt="Властелин Колец">
+        <h2>Властелин Колец</h2>
+        <p class="price">600 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Эпопея Дж. Р. Р. Толкиена, в которой группа героев отправляется в опасное путешествие, чтобы уничтожить кольцо всевластия. Эпическая борьба добра и зла.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Хроники Нарнии -->
+    <div class="book-card">
+        <img src="the-chronicles-of-narnia (1).png" alt="Хроники Нарнии">
+        <h2>Хроники Нарнии</h2>
+        <p class="price">550 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Серия фэнтезийных романов Клайва Льюиса, где дети попадают в волшебную страну Нарнии, где им предстоит сражаться с силами зла.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Гарри Поттер -->
+    <div class="book-card">
+        <img src="harry-potter (1).png" alt="Гарри Поттер">
+        <h2>Гарри Поттер</h2>
+        <p class="price">530 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Серия книг Джоан Роулинг о волшебной школе Хогвартс и юном волшебнике Гарри Поттере, который сражается со злом, стремящимся захватить мир.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Война и Мир -->
+    <div class="book-card">
+        <img src="war-and-peace (1).png" alt="Война и Мир">
+        <h2>Война и Мир</h2>
+        <p class="price">700 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Великое произведение Льва Толстого, описывающее судьбы аристократов во время Наполеоновских войн, их переживания и размышления о жизни.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Три товарища -->
+    <div class="book-card">
+        <img src="three-comrades (1).png" alt="Три товарища">
+        <h2>Три товарища</h2>
+        <p class="price">460 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Роман Эриха Марии Ремарка, рассказывающий о трех молодых друзьях в послевоенной Германии, переживающих тяжелые последствия войны.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- История государства российского -->
+    <div class="book-card">
+        <img src="the-history-of-the-russian-state (1).png" alt="История государства российского">
+        <h2>История государства российского</h2>
+        <p class="price">650 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Историческое произведение Николая Карамзина, которое охватывает историю России с самых древних времен до начала XIX века.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Человек в поисках смысла -->
+    <div class="book-card">
+        <img src="a-man-in-search-of-meaning (1).png" alt="Человек в поисках смысла">
+        <h2>Человек в поисках смысла</h2>
+        <p class="price">580 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Книга Виктора Франкла, в которой он делится своим опытом выживания в концлагерях и рассказывает о поиске смысла в жизни.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Сила воли -->
+    <div class="book-card">
+        <img src="willpower (1).png" alt="Сила воли">
+        <h2>Сила воли</h2>
+        <p class="price">420 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Книга Келли Макгонигал о том, как развить силу воли и достичь своих целей, преодолевая внутренние препятствия.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Думай и богатей -->
+    <div class="book-card">
+        <img src="think-and-get-rich (1).png" alt="Думай и богатей">
+        <h2>Думай и богатей</h2>
+        <p class="price">390 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Книга Наполеона Хилла, в которой он делится принципами достижения успеха и богатства через силу мышления.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Гордость и предубеждение -->
+    <div class="book-card">
+        <img src="pride-and-prejudice (1).png" alt="Гордость и предубеждение">
+        <h2>Гордость и предубеждение</h2>
+        <p class="price">470 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Классический роман Джейн Остин о любви и социальном положении, который рассказывает о непростых отношениях между Элизабет Беннет и мистером Дарси.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Скрижали Судьбы -->
+    <div class="book-card">
+        <img src="the-tablets-of-fate (1).png" alt="Скрижали Судьбы">
+        <h2>Скрижали Судьбы</h2>
+        <p class="price">450 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Фантастический роман о путешествиях во времени и изменении судеб. Рассказ о судьбе человека, решающего судьбоносные проблемы.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Тетрадь памяти -->
+    <div class="book-card">
+        <img src="memory-notebook (1).png" alt="Тетрадь памяти">
+        <h2>Тетрадь памяти</h2>
+        <p class="price">520 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">История о том, как воспоминания о прошлом могут изменить настоящее и будущее человека. Психологический роман с глубоким смыслом.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- 451 градус по Фаренгейту -->
+    <div class="book-card">
+        <img src="451-degrees-fahrenheit (1).png" alt="451 градус по Фаренгейту">
+        <h2>451 градус по Фаренгейту</h2>
+        <p class="price">410 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Антиутопия Рэя Брэдбери, в которой описывается общество, где книги запрещены, а их уничтожение становится частью государственной политики.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- 1984 -->
+    <div class="book-card">
+        <img src="1984 (1).png" alt="1984">
+        <h2>1984</h2>
+        <p class="price">440 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Роман Джорджа Оруэлла о тоталитарном государстве, где индивидуальные права подавляются, а свобода мысли уничтожена.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+
+    <!-- Дюна -->
+    <div class="book-card">
+        <img src="dune (1).png" alt="Дюна">
+        <h2>Дюна</h2>
+        <p class="price">490 рублей</p>
+        <button class="buy-btn">Купить</button>
+        <button class="details-btn">Подробнее</button>
+        <p class="description" style="display: none;">Эпический научно-фантастический роман Фрэнка Герберта о борьбе за власть и ресурсы на пустынной планете Дюна.</p>
+        <button class="collapse-btn" style="display: none;">←</button>
+    </div>
+        </div>
+
+        <section class="offers">
+            <h2>Акции:</h2>
+            <div class="offers-grid">
+                <div class="offer-item">
+                    <h3>Скидка 20% на все книги</h3>
+                    <p>Только сегодня!</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Скидка 15% на детские книги</h3>
+                    <p>До конца недели</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Скидка 10% на бестселлеры</h3>
+                    <p>При покупке 2-х книг</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Подарочный сертификат на 1000₽</h3>
+                    <p>При покупке на 5000₽ и больше</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Скидка 30% на учебники</h3>
+                    <p>До конца месяца</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Скидка 25% на литературу по саморазвитию</h3>
+                    <p>На все книги!</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Скидка 50% на электронные книги</h3>
+                    <p>Только в приложении</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Скидка 50% на электронные книги</h3>
+                    <p>Только в приложении</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <!-- Футер -->
+    <footer id="contact">
+        <p>&copy; г. Москва, 2024, Дарья Книшенко</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook-f"></a>
+            <a href="https://www.twitter.com" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin-in"></a>
+        </div>
+    </footer>
+</body>
+</html>

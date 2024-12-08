@@ -1,0 +1,473 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #69AD96;
+}
+ h3, h4 {
+    font-family: 'Georgia', serif;
+    color: #304A52;
+}
+
+/* Навигация */
+nav {
+    background-color: #F7BC2E;
+    position: sticky;
+    top: 0;
+    z-index: 9999; 
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+
+/* Бургер-меню */
+.burger-menu {
+    display: none; 
+    cursor: pointer;
+    font-size: 40px;
+    color: #304A52;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    display: block;
+    margin: 10px 0;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.nav-links.active {
+    display: block;
+    background-color: #F7BC2E;
+    padding: 10px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.nav-links li a:hover {
+    background-color: #304A52;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 120px;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #F7BC2E;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
+
+/* Регистрация */
+.register-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #336563;
+    padding: 20px;
+    border-radius: 15px;
+    color: #FEFBD7;
+    z-index: 9999;
+}
+
+.form-content {
+    width: 400px;
+}
+
+.form-content h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+form button {
+    padding: 15px;
+    background-color: #69AD96;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #FEFBD7;
+    border-radius: 15px;
+}
+
+/* Кнопка закрытия */
+.close-btn {
+    color: #FEFBD7;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    text-decoration: none;
+}
+/* Адаптация для мобильных устройств */
+@media (max-width: 600px) {
+    .form-content {
+        width: 300px; 
+        padding: 10px; 
+    }
+
+    form input {
+        padding: 8px; 
+    }
+
+    form button {
+        padding: 12px; 
+    }
+
+    .close-btn {
+        font-size: 24px; 
+    }
+}
+/* Блок "Жанры литературы — это..." */
+.genre-description-block {
+    background-color: #304A52;
+    color: #FEFBD7;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto 20px; 
+    width: 90%; 
+    max-width: 1300px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    text-align: justify;  
+    border: 4px dashed #FEFBD7; 
+}
+
+.genre-description-block h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FEFBD7;
+    margin-bottom: 10px;
+    text-align: center;  
+}
+
+.genre-description-block p {
+    font-size: 1rem;
+    color: #FEFBD7;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+/* Стили для блока жанров */
+.genre-section {
+    margin: 50px auto; 
+    padding: 30px; 
+    background-color: #FEFBD7; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    width: 100%; 
+    max-width: 1200px; 
+    box-sizing: border-box; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+/* Заголовки для блоков жанров */
+.genre-section h3 {
+    text-align: center; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #E43D31; 
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Стиль для разделителей между отзывами */
+.reviews .review-item {
+    border-top: 1px solid #304A52; 
+    padding: 10px 0;
+}
+
+.reviews .review-item:first-child {
+    border-top: none; 
+}
+
+/* Выравнивание текста по ширине */
+.genre-description p, .review-item p {
+    text-align: justify; 
+    line-height: 1.6;
+    margin-bottom: 15px; 
+}
+
+/* Стили для изображений жанров */
+.genre-content .genre-image {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid #E43D31; 
+    border-radius: 8px; 
+}
+
+/* Стили для галереи книг */
+.books-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book-item {
+    flex: 1 1 calc(33.333% - 20px); 
+    text-align: center;
+    min-width: 250px; 
+}
+
+.book-item img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px; 
+    border: 2px solid #E43D31; 
+}
+
+.book-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Отзывы */
+.reviews {
+    margin-top: 20px;
+}
+
+.reviews .review-item {
+    border-top: 1px solid #304A52;
+    padding: 15px 0;
+}
+
+.reviews .stars {
+    color: #FFD700; 
+}
+
+.reviews .rating {
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+/* Стили для кружков */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(244, 188, 49, 0.6); 
+    animation-timing-function: ease-in-out;
+}
+
+.circle-1 {
+    width: 40px;
+    height: 40px;
+    animation: fly1 8s infinite;
+}
+
+.circle-2 {
+    width: 100px;
+    height: 100px;
+    animation: fly2 10s infinite;
+}
+
+.circle-3 {
+    width: 80px;
+    height: 80px;
+    animation: fly3 12s infinite;
+}
+
+.circle-4 {
+    width: 60px;
+    height: 60px;
+    animation: fly4 9s infinite;
+}
+
+.circle-5 {
+    width: 120px;
+    height: 120px;
+    animation: fly5 11s infinite;
+}
+
+@keyframes fly1 {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(150px, -100px); }
+    50% { transform: translate(300px, 0); }
+    75% { transform: translate(150px, 100px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes fly2 {
+    0% { transform: translate(0, 0); }
+    30% { transform: translate(-100px, 150px); }
+    60% { transform: translate(200px, 200px); }
+    90% { transform: translate(100px, -50px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes fly3 {
+    0% { transform: translate(0, 0); }
+    40% { transform: translate(200px, -150px); }
+    80% { transform: translate(-150px, 100px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes fly4 {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(50px, -200px); }
+    40% { transform: translate(200px, 100px); }
+    60% { transform: translate(-100px, 150px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes fly5 {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-150px, 100px); }
+    70% { transform: translate(300px, -150px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .books-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .genre-content {
+        display: block;
+        text-align: center;
+    }
+
+    .genre-description {
+        margin-top: 20px;
+    }
+
+    .genre-section {
+        margin: 30px 10px;
+        width: 95%;
+    }
+
+    .genre-image {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .reviews .review-item {
+        padding: 10px 0;
+    }
+
+    .genre-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .genre-section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Стили для футера */
+footer {
+    background-color: #F7BC2E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Анимация при наведении */
+.social-icons a:hover {
+    color: #E43D31;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .genre-section {
+        max-width: 100%; 
+        padding: 15px; 
+    }
+    
+    .genre-description-block {
+        max-width: 100%; 
+        padding: 15px;
+    }
+}

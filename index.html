@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Курсовая</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script> 
+</head>
+<body>
+    <header>
+        <img src="fooon.png" alt="Фон">
+    </header>
+    <!--Навигация-->
+    <nav>
+        <ul class="nav-links">
+            <li class="register-item"><a href="#" id="register-btn">Регистрация</a></li>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="shop.html">Магазин</a></li>
+            <li><a href="help.html">Помощь</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <span class="burger-menu" id="burger-menu">&#9776;</span>
+    </nav>
+    
+    <!--Регистрация-->
+    <div id="register-form" class="register-form">
+        <div class="form-content">
+            <span class="close-btn">&times;</span>
+            <h2>Регистрация</h2>
+            <form>
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+    <main>
+        <!--Начальный блок home-->
+        <section id="home">
+            <div class="home-content">
+                <img src="cat.png" alt="Книжный магазин" class="home-image">
+                <div class="home-text">
+                    <h2>Добро пожаловать в виртуальный книжный магазин!</h2>
+                    <p>В нашем магазине вы найдете огромное количество книг на любой вкус: от классических произведений до современных бестселлеров. Мы предлагаем широкий выбор книг разных жанров — от фантастики и детективов до научной литературы и художественных произведений.</p>
+                    <p>Покупая у нас, вы поддерживаете отечественных авторов и помогаете развивать книжную культуру в вашем регионе. Мы также предлагаем различные акции и скидки для наших постоянных клиентов.</p>
+                    <p>Посетив наш магазин, вы обязательно найдете книгу, которая станет вашим верным спутником на долгое время!</p>
+                </div>
+            </div>
+        </section>
+        
+        <!--Новости-->
+        <div id="news-container">
+            <div class="news-column">
+                <div class="news-block">
+                    <h3 class="news-title">Новая книга известного автора</h3>
+                    <div class="separator"></div>
+                    <p class="news-content" data-full-text="Вчера известный автор презентовал свою новую книгу, которая уже вызвала огромный интерес у читателей. Книга обещает стать бестселлером и получить множество положительных отзывов. В книге рассказывается о приключениях героя в волшебном мире, где он сталкивается с различными испытаниями и находит новых друзей. Автор использует увлекательный стиль письма и захватывающий сюжет, чтобы удерживать внимание читателей до последней страницы. Книга уже получила высокие оценки критиков и обещает стать одной из самых популярных в этом году.">
+                        Вчера известный автор презентовал свою новую книгу, которая уже вызвала огромный интерес у читателей. Книга обещает стать бестселлером и получить множество положительных отзывов. В книге рассказывается о приключениях героя в волшебном мире, где он сталкивается с различными испытаниями и находит новых друзей. Автор использует увлекательный стиль письма и захватывающий сюжет, чтобы удерживать внимание читателей до последней страницы. Книга уже получила высокие оценки критиков и обещает стать одной из самых популярных в этом году.
+                    </p>
+                    <button class="read-more-btn">ПОДРОБНЕЕ</button>
+                </div>
+                <div class="news-block">
+                    <h3 class="news-title">Запуск книжного марафона</h3>
+                    <div class="separator"></div>
+                    <p class="news-content" data-full-text="В этом месяце стартует большой книжный марафон, в котором смогут принять участие все желающие. Участников ждут увлекательные задания и ценные призы. Каждый день будет предлагаться новая тема для чтения, а также будут организованы встречи с авторами и дискуссии по прочитанным книгам. Марафон рассчитан на все возрастные категории и уровень подготовки, поэтому каждый сможет найти что-то интересное для себя. Участвуйте в марафоне и получите возможность выиграть книги, подписанные авторами, и другие приятные призы.">
+                        В этом месяце стартует большой книжный марафон, в котором смогут принять участие все желающие. Участников ждут увлекательные задания и ценные призы. Каждый день будет предлагаться новая тема для чтения, а также будут организованы встречи с авторами и дискуссии по прочитанным книгам. Марафон рассчитан на все возрастные категории и уровень подготовки, поэтому каждый сможет найти что-то интересное для себя. Участвуйте в марафоне и получите возможность выиграть книги, подписанные авторами, и другие приятные призы.
+                    </p>
+                    <button class="read-more-btn">ПОДРОБНЕЕ</button>
+                </div>
+            </div>
+            <div class="news-column">
+                <div class="news-block">
+                    <h3 class="news-title">Литературный вечер в библиотеке</h3>
+                    <div class="separator"></div>
+                    <p class="news-content" data-full-text="В местной библиотеке пройдет литературный вечер, на котором выступят известные писатели и поэты. В программе вечера – чтение стихов, обсуждение новинок литературы и автограф-сессия. Это отличная возможность встретиться с любимыми авторами и задать им вопросы. Кроме того, посетители смогут приобрести книги с автографами и сфотографироваться с авторами. Вечер обещает быть насыщенным и интересным, поэтому не пропустите это событие.">
+                        В местной библиотеке пройдет литературный вечер, на котором выступят известные писатели и поэты. В программе вечера – чтение стихов, обсуждение новинок литературы и автограф-сессия. Это отличная возможность встретиться с любимыми авторами и задать им вопросы. Кроме того, посетители смогут приобрести книги с автографами и сфотографироваться с авторами. Вечер обещает быть насыщенным и интересным, поэтому не пропустите это событие.
+                    </p>
+                    <button class="read-more-btn">ПОДРОБНЕЕ</button>
+                </div>
+                <div class="news-block">
+                    <h3 class="news-title">Новые поступления в книжный магазин</h3>
+                    <div class="separator"></div>
+                    <p class="news-content" data-full-text="Наш магазин рад сообщить о поступлении новых книг, среди которых произведения современных авторов и классическая литература. Приходите и найдите книгу по душе. В ассортименте – новинки художественной литературы, научные издания, биографии и мемуары. Также в продаже появились редкие коллекционные издания и книги с автографами. Наши консультанты помогут вам выбрать книгу, которая подойдет именно вам. Не пропустите шанс пополнить свою библиотеку новыми интересными книгами.">
+                        Наш магазин рад сообщить о поступлении новых книг, среди которых произведения современных авторов и классическая литература. Приходите и найдите книгу по душе. В ассортименте – новинки художественной литературы, научные издания, биографии и мемуары. Также в продаже появились редкие коллекционные издания и книги с автографами. Наши консультанты помогут вам выбрать книгу, которая подойдет именно вам. Не пропустите шанс пополнить свою библиотеку новыми интересными книгами.
+                    </p>
+                    <button class="read-more-btn">ПОДРОБНЕЕ</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Галерея жанров -->
+        <section class="genre-gallery" id="genre-gallery">
+            <h2>Чтобы мне почитать...</h2>
+            <div class="gallery-wrapper">
+                <button class="arrow left-arrow" id="left-arrow">&#9664;</button>
+                <div class="gallery">
+                    <div class="genre-item">
+                        <img src="classics.png" alt="Классика">
+                        <div class="card-info">
+                            <h3>Классика</h3>
+                            <p>Лучшие произведения мировой литературы: Достоевский, Толстой и другие.</p>
+                            <a href="genre.html">Посмотреть жанр</a>
+                        </div>
+                    </div>
+                    <div class="genre-item">
+                        <img src="detective1.png" alt="Детективы">
+                        <div class="card-info">
+                            <h3>Детективы</h3>
+                            <p>Захватывающие расследования и острые сюжеты.</p>
+                            <a href="genre.html">Посмотреть жанр</a>
+                        </div>
+                    </div>
+                    <div class="genre-item">
+                        <img src="fantasy1.png" alt="Фэнтези">
+                        <div class="card-info">
+                            <h3>Фэнтези</h3>
+                            <p>Магия, приключения и фантастические миры.</p>
+                            <a href="genre.html">Посмотреть жанр</a>
+                        </div>
+                    </div>
+                    <div class="genre-item">
+                        <img src="history1.png" alt="Исторические">
+                        <div class="card-info">
+                            <h3>Исторические</h3>
+                            <p>Погрузитесь в величественные события прошлого.</p>
+                            <a href="genre.html">Посмотреть жанр</a>
+                        </div>
+                    </div>
+                    <div class="genre-item">
+                        <img src="non-fiction.png" alt="Нон-фикшн">
+                        <div class="card-info">
+                            <h3>Нон-фикшн</h3>
+                            <p>Правдивые истории и научные открытия.</p>
+                            <a href="genre.html">Посмотреть жанр</a>
+                        </div>
+                    </div>
+                    <div class="genre-item">
+                        <img src="romance1.png" alt="Романтика">
+                        <div class="card-info">
+                            <h3>Романтика</h3>
+                            <p>Любовные истории и трогательные отношения.</p>
+                            <a href="genre.html">Посмотреть жанр</a>
+                        </div>
+                    </div>
+                    <div class="genre-item">
+                        <img src="science1.png" alt="Научная фантастика">
+                        <div class="card-info">
+                            <h3>Научная фантастика</h3>
+                            <p>Будущее и научные приключения.</p>
+                            <a href="genre.html">Посмотреть жанр</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow right-arrow" id="right-arrow">&#9654;</button>
+            </div>
+        </section>
+
+        <!-- Галерея товаров -->
+        <section class="product-gallery">
+            <h2 class="gallery-title">Популярное:</h2>
+            <div class="product-container">
+                <div class="product-item">
+                    <img src="anna-karenina (1).png" alt="Анна Каренина">
+                    <p>Анна Каренина</p>
+                </div>
+                <div class="product-item">
+                    <img src="harry-potter (1).png" alt="Гарри Поттер">
+                    <p>Гарри Поттер</p>
+                </div>
+                <div class="product-item">
+                    <img src="lord-of-the-rings (1).png" alt="Властелин колец">
+                    <p>Властелин колец</p>
+                </div>
+                <div class="product-item">
+                    <img src="the-master-and-margarita (1).png" alt="Мастер и Маргарита">
+                    <p>Мастер и Маргарита</p>
+                </div>
+                <div class="product-item">
+                    <img src="three-comrades (1).png" alt="Три товарища">
+                    <p>Три товарища</p>
+                </div>
+                <div class="product-item">
+                    <img src="the-history-of-the-russian-state (1).png" alt="История государства Российского">
+                    <p>История государства Российского</p>
+                </div>
+            </div>
+            <a href="shop.html" class="shop-button">К покупкам!!!</a>
+        </section>
+        
+        <!-- Отзывы -->
+        <div class="reviews-container">
+            <h2>Отзывы:</h2>
+            <div class="reviews">
+                <div class="review">
+                    <div class="review-header">
+                        <div class="avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <p class="reviewer">Анна Иванова</p>
+                    </div>
+                    <p class="review-text">Отличный магазин! Большой выбор книг и отличное обслуживание. Покупала здесь несколько раз, и всегда оставалась довольна. Особенно радует наличие редких и антикварных изданий. Очень рекомендую всем любителям книг!</p>
+                    <div class="review-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating">5</span>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <div class="avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <p class="reviewer">Петр Смирнов</p>
+                    </div>
+                    <p class="review-text">Заказывал здесь несколько раз. Всегда быстро и качественно! Магазин предлагает хорошую систему скидок и бонусов для постоянных клиентов. Курьер всегда вовремя доставляет заказ. Очень доволен сервисом!</p>
+                    <div class="review-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating">4</span>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <div class="avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <p class="reviewer">Мария Кузнецова</p>
+                    </div>
+                    <p class="review-text">Нашел редкие издания, которые давно искал. Спасибо! Книги в отличном состоянии, быстрая доставка и адекватные цены. Планирую продолжать заказывать здесь и в будущем. Очень рекомендую магазин!</p>
+                    <div class="review-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating">5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="more-reviews">
+                <a href="otzovs.html">Больше</a>
+            </div>
+        </div>
+        
+        
+    </main>
+    <!-- Футер -->
+    <footer id="contact">
+        <p>&copy; г. Москва, 2024, Дарья Книшенко</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook-f"></a>
+            <a href="https://www.twitter.com" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin-in"></a>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
